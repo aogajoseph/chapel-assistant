@@ -7,39 +7,6 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { styled } from '@mui/material/styles';
-
-// Helper to auto-link URLs in text
-function linkify(text) {
-  if (!text) return text;
-  const urlRegex = /(https?:\/\/[\w\-._~:/?#[\]@!$&'()*+,;=%]+)|(www\.[\w\-._~:/?#[\]@!$&'()*+,;=%]+)/gi;
-  return text.split(urlRegex).map((part, i) => {
-    if (!part) return null;
-    if (part.match(urlRegex)) {
-      let href = part.startsWith('http') ? part : `https://${part}`;
-      return <a key={i} href={href} target="_blank" rel="noopener noreferrer" style={{ color: '#7F00FF', textDecoration: 'underline' }}>{part}</a>;
-    }
-    return part;
-  });
-}
-
-const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
-  return <span {...other} />;
-})(({ theme, expand }) => ({
-  marginLeft: 'auto',
-  display: 'flex',
-  alignItems: 'center',
-  cursor: 'pointer',
-  color: '#7F00FF',
-  fontWeight: 500,
-  fontSize: 13,
-  userSelect: 'none',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-  transform: expand ? 'rotate(180deg)' : 'rotate(0deg)',
-}));
 
 const cardStyles = [
   {

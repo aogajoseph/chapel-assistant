@@ -7,25 +7,6 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { styled } from '@mui/material/styles';
-
-const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
-  return <span {...other} />;
-})(({ theme, expand }) => ({
-  marginLeft: 'auto',
-  display: 'flex',
-  alignItems: 'center',
-  cursor: 'pointer',
-  color: '#4B0082',
-  fontWeight: 500,
-  fontSize: 13,
-  userSelect: 'none',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-  transform: expand ? 'rotate(180deg)' : 'rotate(0deg)',
-}));
 
 const cardStyles = [
   {

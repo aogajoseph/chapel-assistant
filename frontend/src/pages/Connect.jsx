@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, TextField, Button, Stack, IconButton, Paper, Divider, MenuItem } from "@mui/material";
+import { Box, Typography, TextField, Button, Stack, IconButton, Paper, MenuItem } from "@mui/material";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -7,7 +7,6 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
-import PaymentIcon from '@mui/icons-material/Payment';
 
 const donationMethods = [
   { value: 'mpesa', label: 'Mpesa', icon: <PhoneAndroidIcon sx={{ fontSize: 18, mr: 1 }} /> },
@@ -40,13 +39,13 @@ const Connect = () => {
       {/* Left: Feedback Form and Socials */}
       <Box sx={{ flex: 1, minWidth: 340, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Paper elevation={2} sx={{ p: 3, borderRadius: 3, mb: 2, ...cardStyles[2], boxShadow: '0 2px 12px 0 rgba(90, 100, 120, 0.07)' }}>
-          <Typography variant="h5" fontWeight={700} mb={2} color="#333">Feedback</Typography>
+          <Typography variant="h5" fontWeight={700} mb={2} color="#7F00FF">Feedback</Typography>
           <Typography variant="body2" color="text.secondary" mb={2}>
             Your feedback is anonymous. If you would like a response, kindly include your phone number or email in your message. We value your thoughts.
           </Typography>
           <form>
             <Stack spacing={2}>
-              <TextField label="Message" variant="outlined" fullWidth multiline rows={4} />
+              <TextField label="Type here..." variant="outlined" fullWidth multiline rows={4} />
               <Button variant="contained" color="primary" type="submit" sx={{ alignSelf: 'flex-end', borderRadius: 2 }}>
                 Send
               </Button>
@@ -116,11 +115,11 @@ const Connect = () => {
           </form>
         </Paper>
         <Paper elevation={2} sx={{ p: 3, borderRadius: 3, mb: 2, ...cardStyles[1], boxShadow: '0 2px 12px 0 rgba(90, 100, 120, 0.07)' }}>
-          <Typography variant="subtitle1" fontWeight={600} mb={1} sx={{ fontSize: 16 }}>Church Location</Typography>
+          <Typography variant="subtitle1" fontWeight={600} mb={0.5} sx={{ fontSize: 16, color: '#7F00FF' }}>Church Location</Typography>
           <Typography variant="body2" color="text.secondary" mb={1}>
             Jamuhuri Road off Ngong Road
           </Typography>
-          <Typography variant="subtitle1" fontWeight={600} mb={1} sx={{ fontSize: 16 }}>Office Location</Typography>
+          <Typography variant="subtitle1" fontWeight={600} mb={0.5} sx={{ fontSize: 16, color: '#7F00FF' }}>Office Location</Typography>
           <Typography variant="body2" color="text.secondary">
             Greenhouse Building, Adams Arcade, Ngong Road. <br /> West Wing, First Floor (Suite1)
           </Typography>
